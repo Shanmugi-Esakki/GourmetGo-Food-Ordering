@@ -1,0 +1,275 @@
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1,
+.hero-section p {
+  text-align: center;
+}
+
+.hero-section .animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-section .bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-section .bg-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeInOut 15s linear infinite;
+}
+
+.hero-section .bg-layer:nth-child(1) img {
+  animation-delay: 0s;
+}
+
+.hero-section .bg-layer:nth-child(2) img {
+  animation-delay: 3s;
+}
+
+.hero-section .bg-layer:nth-child(3) img {
+  animation-delay: 6s;
+}
+
+.hero-section .bg-layer:nth-child(4) img {
+  animation-delay: 9s;
+}
+
+.hero-section .bg-layer:nth-child(5) img {
+  animation-delay: 12s;
+}
+
+.hero-section .bg-layer:nth-child(6) img {
+  animation-delay: 15s;
+}
+
+@keyframes fadeInOut {
+  0%,
+  25%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  20% {
+    opacity: 1;
+  }
+}
+
+.animated.fadeInDown {
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.animated.fadeInUp {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-container {
+  position: relative;
+  z-index: 2; /* Ensure the text is above other elements */
+  color: white; /* Set text color for visibility */
+  font-size: 3rem; /* Adjust font size as needed */
+  text-align: center;
+  padding: 20px; /* Add padding around the text */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+@keyframes aurora {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 100% 0, 100% 0;
+  }
+}
+
+@keyframes shift {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .banner {
+    height: 40vh;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  .cover {
+    height: 40vh;
+  }
+
+  .fadout {
+    bottom: -3rem;
+    height: 20vw;
+  }
+
+  .text-container {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+}
+.how-it-works {
+  text-align: center;
+  padding: 10px;
+
+}
+
+.how-it-works h2 {
+  text-align: center;
+  color: #fdc401;
+  animation: fadeInHeading 1s ease-in-out;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@keyframes fadeInHeading {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flowchart-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.flowchart-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  background-color: #ffc529;
+  border-radius: 10px;
+  transition: transform 0.5s, background-color 0.3s;
+  animation: float 1s ease-in-out infinite;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flowchart-step img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.flowchart-text {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+.flowchart-arrow {
+  font-size: 40px;
+  color: #ffc529;
+  animation: fadeInArrow 1s ease-in-out;
+}
+
+.flowchart-step:hover {
+  transform: scale(1.05) translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeInArrow {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInArrow {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
